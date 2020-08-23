@@ -3,7 +3,7 @@
 Docker practiceはこれからDockerに入門する方を対象とした問題集です。dockerコマンドの基本的な使い方、Dockerfileによるコンテナイメージのビルド方法、docker-composeによるコンテナの起動方法などDockerの基本を抑えることを目的としています。テーマごとに動作や使い方を学ぶ問題を用意しています。問題の指示や公式ドキュメントを参考に自身で考えながら進めてください。
 
 ## 前提
-Dockerおよびdocker-composeをインストールしてありDocker Hubに接続できる端末で実施する前提です。
+Dockerおよびdocker-composeをインストールしてありDocker Hubに接続できる端末で実施する前提です。また、一部のプラクティスは2台のサーバを使用します。
 
 # プラクティスの内容
 ## コンテナの基本
@@ -19,8 +19,9 @@ Dockerおよびdocker-composeをインストールしてありDocker Hubに接�
 - [まとめ](./container/container-summary.md)
 
 ## コンテナイメージの基本
-- コンテナイメージの操作
-- コンテナイメージの作成
+- [イメージの取得/削除](./image/image-operation.md)
+- [イメージレジストリ](./image/image-registry.md)
+- [イメージの作成](./image/image-build.md)
 
 ## docker-composeの基本
 - docker-composeによるコンテナ起動
