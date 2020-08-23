@@ -1,6 +1,6 @@
-[TOP](../README.md) 
-前: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)
-次: [どこでも同じものが動くということ](./container-feature-reproducibility.md)
+[TOP](../README.md)   
+前: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)  
+次: [どこでも同じものが動くということ](./container-feature-reproducibility.md)  
 
 --- 
 
@@ -67,6 +67,6 @@ VMの場合、ファイルシステムに保存したデータは再起動して
 
 ---
 
-[TOP](../README.md) 
-前: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)
-次: [どこでも同じものが動くということ](./container-feature-reproducibility.md)
+[TOP](../README.md)   
+前: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)  
+次: [どこでも同じものが動くということ](./container-feature-reproducibility.md)  

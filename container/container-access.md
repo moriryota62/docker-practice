@@ -1,13 +1,13 @@
-[TOP](../README.md) 
-前: [コンテナの起動](./container-run.md)
-前: [どこでも同じものが動くということ](./container-feature-reproducibility.md)（時間ある人向け）
-次: [コンテナにファイルシステムをマウント](./container-volume.md)
+[TOP](../README.md)  
+前: [コンテナの起動](./container-run.md)  
+前: [どこでも同じものが動くということ](./container-feature-reproducibility.md)（時間ある人向け）  
+次: [コンテナにファイルシステムをマウント](./container-volume.md)  
 
 ---
 
 # コンテナへのアクセス
 
-``ここから前に出た手順のコマンドは省略して行きます。自分で調べながら進めてみてください。``
+**ここから前に出た手順のコマンドは省略します。自分で調べながら進めてみてください。**
 
 コンテナはホスト内の隔離されたネットワーク（デフォルトではbridgeというネットワーク）で動いています。同一ホスト内のコンテナはこのネットワークで通信が可能です。しかし、これだとホスト外からアクセスすることができません。dockerではコンテナを起動する時に隔離ネットワークとホストOSを繋ぐことができます。
 
@@ -55,7 +55,7 @@
 
 ---
 
-[TOP](../README.md) 
-前: [コンテナの起動](./container-run.md)
-前: [どこでも同じものが動くということ](./container-feature-reproducibility.md)（時間ある人向け）
-次: [コンテナにファイルシステムをマウント](./container-volume.md)
+[TOP](../README.md)   
+前: [コンテナの起動](./container-run.md)  
+前: [どこでも同じものが動くということ](./container-feature-reproducibility.md)（時間ある人向け）  
+次: [コンテナにファイルシステムをマウント](./container-volume.md)  

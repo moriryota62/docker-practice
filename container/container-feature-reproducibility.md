@@ -1,6 +1,6 @@
-[TOP](../README.md) 
-前: [一時的であるということ](./container-feature-ephemeral.md)
-次: [コンテナへのアクセス](./container-access.md)
+[TOP](../README.md)   
+前: [一時的であるということ](./container-feature-ephemeral.md)  
+次: [コンテナへのアクセス](./container-access.md)  
 
 ---
 
@@ -62,6 +62,6 @@
 
 ---
 
-[TOP](../README.md) 
-前: [一時的であるということ](./container-feature-ephemeral.md)
-次: [コンテナへのアクセス](./container-access.md)
+[TOP](../README.md)   
+前: [一時的であるということ](./container-feature-ephemeral.md)  
+次: [コンテナへのアクセス](./container-access.md)  

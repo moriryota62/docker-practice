@@ -1,7 +1,7 @@
-[TOP](../README.md) 
-前: -
-次: [コンテナへのアクセス](./container-access.md)
-次: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)（時間ある人向け）
+[TOP](../README.md)   
+前: -  
+次: [コンテナへのアクセス](./container-access.md)  
+次: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)（時間ある人向け）  
 
 ---
 
@@ -54,7 +54,7 @@
 
 --- 
 
-[TOP](../README.md) 
-前: -
-次: [コンテナへのアクセス](./container-access.md)
-次: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)（時間ある人向け）
+[TOP](../README.md)   
+前: -  
+次: [コンテナへのアクセス](./container-access.md)  
+次: [ホストOS上の隔離空間であるということ](./container-feature-isolation.md)（時間ある人向け）  

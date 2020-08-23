@@ -1,6 +1,6 @@
-[TOP](../README.md) 
-前: [コンテナの起動](./container-run.md)
-次: [一時的であるということ](./container-feature-ephemeral.md)
+[TOP](../README.md)   
+前: [コンテナの起動](./container-run.md)  
+次: [一時的であるということ](./container-feature-ephemeral.md)  
 
 ---
 
@@ -73,6 +73,6 @@
 
 ---
 
-[TOP](../README.md) 
-前: [コンテナの起動](./container-run.md)
-次: [一時的であるということ](./container-feature-ephemeral.md)
+[TOP](../README.md)   
+前: [コンテナの起動](./container-run.md)  
+次: [一時的であるということ](./container-feature-ephemeral.md)  
