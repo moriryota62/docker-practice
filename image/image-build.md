@@ -25,7 +25,7 @@
 4. 以下を満たす様にDockerfileを修正してください。
    - 作成した``index.html``を``/usr/share/nginx/html/``にコピーしてください。（ヒント：[COPY](https://docs.docker.jp/engine/reference/builder.html#copy)命令を使います。）
    - 環境変数に``ENV=dev``を設定してください。(ヒント：[ENV](https://docs.docker.jp/engine/reference/builder.html#env)命令を使います。)
-   - ``["sh","-c","echo $ENV >> /usr/share/nginx/html/index.html"]``コマンドをbuild時に実行してindex.htmlを編集してください。(ヒント①：[RUN](https://docs.docker.jp/engine/reference/builder.html#run)命令を使います。)
+   - ``["sh","-c","echo $ENV >> /usr/share/nginx/html/index.html"]``コマンドを実行してindex.htmlを編集してください。(ヒント：[RUN](https://docs.docker.jp/engine/reference/builder.html#run)命令を使います。)
 5. イメージをビルドしてください。イメージ名は``buildtest:v1``にしてください。（ヒント：ビルドは[docker build](https://docs.docker.jp/engine/reference/commandline/build.html)コマンドを使います。）
 6. ホストOSのイメージ一覧を表示し、``buildtest:v1``イメージがあることを確認してください。
 7. ``buildtest:v1``イメージのコンテナをバックグランドで実行してください。ホストOSの``8080``をコンテナの``80``に繋いでください。
