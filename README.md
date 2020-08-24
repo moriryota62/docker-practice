@@ -6,6 +6,9 @@ Docker practiceはこれからDockerに入門する方を対象とした問題�
 Dockerおよびdocker-composeをインストールしてありDocker Hubに接続できる端末で実施する前提です。また、一部のプラクティスは2台のサーバを使用します。
 
 # プラクティスの内容
+
+プラクティス内の``{ホストOS名}``など{}でくくった日本語の箇所は括弧内の日本語に従い置換してください。
+
 ## コンテナの基本
 - [コンテナの起動](./container/container-run.md)
 - コンテナの特徴（時間がある人向け）
@@ -22,7 +25,12 @@ Dockerおよびdocker-composeをインストールしてありDocker Hubに接�
 - [イメージの取得/削除](./image/image-operation.md)
 - [イメージレジストリ](./image/image-registry.md)
 - [イメージの作成](./image/image-build.md)
+- [まとめ](./image/image-summary.md)
+- [イメージの手動運搬](./image/image-transport.md)（興味のある人向け）
 
 ## docker-composeの基本
 - docker-composeによるコンテナ起動
 - docker-composeによる複数コンテナの連携
+
+## dockerデーモンの設定（マニュアルのリンクだけ紹介）
+- [dockerデーモンの設定](http://docs.docker.jp/engine/reference/commandline/daemon.html)
