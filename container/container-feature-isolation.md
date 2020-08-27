@@ -12,23 +12,28 @@
    ``` sh
    ps -ef
    ```
+
 2. 以下コマンドでcentosのコンテナをバックグランドで実行します。コンテナの実行コマンドは``/bin/sh -c "sleep 1111"``を指定します。
    ``` sh
    sudo docker container run -d centos /bin/sh -c "sleep 11111"
    ```
+
 3. 以下コマンドでcentosのコンテナをバックグランドでもう1つ実行します。コンテナの実行コマンドは``/bin/sh -c "sleep 2222"``を指定します。
    ``` sh
    sudo docker container run -d centos /bin/sh -c "sleep 22222"
    ```
+
 4. 以下コマンドで動いているコンテナを確認します。centosイメージのコンテナが2つ動いているはずです。
    ``` sh
    sudo docker container ls
    ```
+
 5. 以下コマンドで各コンテナの中のプロセスを確認します。PID1のプロセスがsleepコマンドを実行しているプロセスになっているはずです。
    ``` sh
    sudo docker exec {1つ目のコンテナID} ps -ef
    sudo docker exec {2つ目のコンテナID} ps -ef
    ```
+
 6. 以下コマンドで各コンテナに一時ファイルを作成し、ディレクトリの状態を確認します。ファイルは指定したコンテナ内にのみ作成されていることを確認してください。
    ``` sh
    # １つ目のコンテナ
@@ -39,21 +44,25 @@
    sudo docker exec {2つ目のコンテナID} touch second-container
    sudo docker exec {2つ目のコンテナID} ls -la
    ```
+
 7. 以下コマンドで各コンテナのIPアドレスを確認します。eth0に別々の172.17.0.0/16アドレス帯の別々のIPアドレスが振られていることを確認してください。
    ``` sh
    sudo docker exec {1つ目のコンテナID} ip a
    sudo docker exec {2つ目のコンテナID} ip a
    ```
+
 8. ホストOSで以下のようにコマンドを実行します。sleepを実行しているプロセスが2つ表示され、PIDは1ではないはずです。また、親プロセスのID（PPID）も確認しておきます。
    ``` sh
    ps -ef | grep sleep | grep -v grep
    ```
+
 9. 上記確認したプロセスの親のさらに親のプロセスを以下のように確認します。親の親は``containerd``になっていると思います。
    ``` sh
    ps -ef | grep {１つ目のプロセスの親プロセスID}
    ps -ef | grep {2つ目のプロセスの親プロセスID}
    ps -ef | grep {親の親プロセスID}
    ```
+
 10. 以下コマンドでコンテナを削除してください。
     ``` sh
     docker container rm -f {1つ目のコンテナID} {2つ目のコンテナID}

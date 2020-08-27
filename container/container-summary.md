@@ -12,6 +12,7 @@
    ``` 
    docker run de iroiro sitei suruno taihen
    ```
+
 2. 以下をすべて満たすコンテナを実行してください。
       - イメージは``nginx:1.19.2``
    - バックグラウンド実行
@@ -19,13 +20,18 @@
    - ホストOSの``8080``ポートとコンテナの``80``ポートを接続
    - ロギングドライバで``json-file``、ファイルサイズの上限を``10MB``、世代数を``3``
    - 環境変数に``ENV=docker-practice``を設定
+
 3. コンテナが動いていることを確認してください。
+
 4. ホストOSからlocalhost:8080に対してcurlを実行してください。``~/container-mount``配下に作成したindex.htmlの内容が表示されることを確認してください。
+
 5. コンテナに``env``の追加コマンドを発行し環境変数``ENV=docker-practice``が設定されていることを確認してください。
+
 6. 以下コマンドでコンテナのログ設定を確認してください。
    ``` sh
    docker inspect {コンテナID} | grep -e Type -e max-file -e max-size
    ```
+
 7. 以下コマンドですべてのコンテナを削除してください。
     ``` sh
     docker rm -f `docker ps -a -q`

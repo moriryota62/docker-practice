@@ -17,9 +17,13 @@
 次に、プライベートなイメージレジストリにイメージを保存してみます。
 
 2. ホストOS内にダウンロード済みのコンテナイメージを確認してください。
+
 3. 適当なコンテナイメージ1つを選択し、``{ホストOSのホスト名}:5000/testimage:v1``というイメージ名にタグをつけ直してください。（ヒント：イメージ名の操作は[dokcer tag](https://docs.docker.jp/engine/reference/commandline/tag.html)コマンドを使います。）
+
 4. ホストOS内にダウンロード済みのコンテナイメージを確認してください。REPOSITORY:``{ホストOSのホスト名}:5000/testimage``、TAG:``v1``のイメージがあることを確認してください。
+
 5. イメージ``{ホストOSのホスト名}:5000/testimage:v1``をイメージレジストリに保存してください。（ヒント：イメージのリモートへの保存は[docker push](https://docs.docker.jp/engine/reference/commandline/push.html)コマンドを使います。）
+
 6. プライベートレジストリにイメージが格納できたか確認します。以下のcurlコマンドをホストOSで実行してください。``testimage``が表示されるはずです。
    ``` sh
    curl localhost:5000/v2/_catalog

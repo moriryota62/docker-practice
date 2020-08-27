@@ -13,6 +13,7 @@
    mkdir test-container
    cd test-container
    ```
+
 2. 以下のコマンドを実行してファイルを作成してください。これはDockerfileというファイルを作成しています。Dockerfileはコンテナイメージを作成するレシピの様なものです。今回はnginxのイメージをベースにindex.htmlの内容を任意の文字列に修正しています。Dockerfileについては後ほどまた触れるのでとりあえずコピペしてください。
    ``` sh
    cat << EOF > Dockerfile
@@ -20,38 +21,46 @@
    RUN echo "onaji container image kara sakusei sita container ha onaji ugoki wo simasu" > /usr/share/nginx/html/index.html
    EOF
    ```
+
 3. Dockerfileからコンテナイメージを作成します。
    ``` sh
    sudo docker build -t nginx:reproducibility .
    ```
+
 4. イメージが作成されたことを確認します。
    ``` sh
    sudo docker image ls | grep reproducibility
    ```
+
 5. 作成したイメージを使ってコンテナを3つ作ります。
    ``` sh
    sudo docker run -d nginx:reproducibility
    sudo docker run -d nginx:reproducibility
    sudo docker run -d nginx:reproducibility
    ```
+
 6. コンテナが動いていることを確認しつつコンテナIDを確認します。
    ``` sh
    sudo docker container ls
    ```
+
 7. コンテナに追加コマンドを発行します。すべてのコンテナで出力結果が同じであることを確認します。
    ``` sh
    sudo docker exec {1つ目CONTAINER ID} sh -c "curl -s localhost"
    sudo docker exec {2つ目CONTAINER ID} sh -c "curl -s localhost"
    sudo docker exec {3つ目CONTAINER ID} sh -c "curl -s localhost"
    ```
+
 8. コンテナをすべて削除します。
    ``` sh
    docker rm -f `docker ps -a -q`
    ```
+
 9. 確認用に作成したコンテナイメージを削除します。
    ``` sh
    sudo docker image rm nginx:reproducibility
    ```
+
 10. 作業したディレクトリも削除します。
    ``` sh
    cd ../
