@@ -1,3 +1,9 @@
+[TOP](../README.md)  
+前: -  
+次: [docker-composeによるネットワーク作成](./compose-network.md)  
+
+---
+
 # docker-composeによるコンテナ起動
 
 docker-composeはコンテナ起動の設定をファイルに定義し、定義した内容のコンテナを簡単に起動・削除できるツールです。開発中などで何度もコンテナを上げ直したい時に重宝します。docker runよりもdocker-composeでコンテナを起動することの方が多いかもしれません。
@@ -36,7 +42,9 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
 
 7. docker-composeで起動したコンテナを削除してください。（ヒント：削除は[docker-compose down](http://docs.docker.jp/compose/reference/down.html)コマンドを使います。）
 
-このようにdocker-composeを使うとdocker runで指定していた起動設定をいちいち指定しなくて済みます。もう少し練習します。
+このようにdocker-composeを使うとdocker runで指定していた起動設定をいちいち指定しなくて済みます。また、composeで起動したコンテナは<プロジェクト名>_<サービス名>_<連番>という名前になります。プロジェクト名は``-p``オプションで指定できます。指定がない場合はカレントディレクトリ名がプロジェクト名になります。コンテナと一緒にネットワークも作られますが、これについては次のプラクティスで扱います。
+
+もう少しdocker-composeの練習します。
 
 8. ホストOSに``~/compose-mount``というテスト用のディレクトリを作成してください。
 
@@ -54,3 +62,8 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
 
 13. docker-composeでコンテナを削除してください。
 
+---
+
+[TOP](../README.md)  
+前: -  
+次: [docker-composeによるネットワーク作成](./compose-network.md)  
