@@ -8,7 +8,7 @@
 
 docker-composeはコンテナ起動の設定をファイルに定義し、定義した内容のコンテナを簡単に起動・削除できるツールです。開発中などで何度もコンテナを上げ直したい時に重宝します。docker runよりもdocker-composeでコンテナを起動することの方が多いかもしれません。
 
-1. 以下コマンドで``docker-compose.yml``ファイルを作成してください。（ファイルの作成は``~/compose-mount``でなくて良いです。）（composeファイルの内容については[日本語マニュアル](http://docs.docker.jp/compose/compose-file.html)と見比べてみてください。）
+1. 以下コマンドで``docker-compose.yml``ファイルを作成してください。（composeファイルの内容については[日本語マニュアル](http://docs.docker.jp/compose/compose-file.html)と見比べてみてください。）
    ``` sh
    cat <<EOF > docker-compose.yml
    version: '3'
@@ -23,7 +23,7 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
            max-size: "10m"
            max-file: "2"
        environment:
-         ENV: dev
+         ENV: test
    EOF
    ```
 
@@ -33,7 +33,7 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
    
 4. ホストOSからlocalhost:8080に対してcurlを実行してください。
    
-5. コンテナに``env``の追加コマンドを発行し環境変数``ENV=compose-test``が設定されていることを確認してください。
+5. コンテナに``env``の追加コマンドを発行し環境変数``ENV=test``が設定されていることを確認してください。
 
 6. 以下コマンドでコンテナのログ設定を確認してください。
    ``` sh
@@ -42,7 +42,7 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
 
 7. docker-composeで起動したコンテナを削除してください。（ヒント：削除は[docker-compose down](http://docs.docker.jp/compose/reference/down.html)コマンドを使います。）
 
-このようにdocker-composeを使うとdocker runで指定していた起動設定をいちいち指定しなくて済みます。また、composeで起動したコンテナは<プロジェクト名>_<サービス名>_<連番>という名前になります。プロジェクト名は``-p``オプションで指定できます。指定がない場合はカレントディレクトリ名がプロジェクト名になります。コンテナと一緒にネットワークも作られますが、これについては次のプラクティスで扱います。
+このようにdocker-composeを使うとdocker runで指定していた起動設定をいちいち指定しなくて済みます。また、composeで起動したコンテナは``<プロジェクト名>_<サービス名>_<連番>``という名前になります。プロジェクト名は``-p``オプションで指定できます。指定がない場合はカレントディレクトリ名がプロジェクト名になります。コンテナと一緒にネットワークも作られます。これにいては[docker-composeによるネットワーク作成](./compose-network.md)で触れます。
 
 もう少しdocker-composeの練習します。
 
@@ -53,7 +53,7 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
    echo "compose de mount simasita" > ~/compose-mount/index.html
    ```
 
-10. さらに以下を満たすよう``docker-compose.yml``に設定を追加してください。
+10. さらに以下を満たすように``docker-compose.yml``を修正してください。
     - ホストOSの``~/compose-mout``をコンテナの``/usr/share/nginx/html``にマウント（ヒント：[volume](http://docs.docker.jp/compose/compose-file.html#volumes-volume-driver)を使います。）
 
 11. docker-composeでコンテナをバックグランドで起動してください。

@@ -18,7 +18,7 @@
    ``` sh
    cat << EOF > Dockerfile
    FROM nginx:1.19.2
-   RUN echo "onaji container image kara sakusei sita container ha onaji ugoki wo simasu" > /usr/share/nginx/html/index.html
+   RUN echo "onaji container image de kidou sita container ha nakami mo onaji desu" > /usr/share/nginx/html/index.html
    EOF
    ```
 
@@ -29,7 +29,7 @@
 
 4. イメージが作成されたことを確認します。
    ``` sh
-   sudo docker image ls | grep reproducibility
+   sudo docker images | grep reproducibility
    ```
 
 5. 作成したイメージを使ってコンテナを3つ作ります。
@@ -41,7 +41,7 @@
 
 6. コンテナが動いていることを確認しつつコンテナIDを確認します。
    ``` sh
-   sudo docker container ls
+   sudo docker ps
    ```
 
 7. コンテナに追加コマンドを発行します。すべてのコンテナで出力結果が同じであることを確認します。
@@ -58,7 +58,7 @@
 
 9. 確認用に作成したコンテナイメージを削除します。
    ``` sh
-   sudo docker image rm nginx:reproducibility
+   sudo docker rmi nginx:reproducibility
    ```
 
 10. 作業したディレクトリも削除します。
