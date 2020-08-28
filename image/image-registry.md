@@ -18,7 +18,7 @@
 
 2. ホストOS内にダウンロード済みのコンテナイメージを確認してください。
 
-3. 適当なコンテナイメージ1つを選択し、``{ホストOSのホスト名}:5000/testimage:v1``というイメージ名にタグをつけ直してください。（ヒント：イメージ名の操作は[dokcer tag](https://docs.docker.jp/engine/reference/commandline/tag.html)コマンドを使います。）
+3. 適当なコンテナイメージ1つを選択し、``{ホストOSのホスト名}:5000/testimage:v1``というイメージ名にタグをつけ直してください。（ヒント：イメージ名の操作は[docker tag](https://docs.docker.jp/engine/reference/commandline/tag.html)コマンドを使います。）
 
 4. ホストOS内にダウンロード済みのコンテナイメージを確認してください。REPOSITORY:``{ホストOSのホスト名}:5000/testimage``、TAG:``v1``のイメージがあることを確認してください。
 
