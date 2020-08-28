@@ -45,7 +45,7 @@ VMの場合、ファイルシステムに保存したデータは再起動して
    sudo docker stop {1つ目コンテナID}
    ```
 
-8. 新しいコンテンを作成してください。
+8. 新しいコンテナを作成してください。
    ``` sh
    sudo docker run -d centos /bin/sh -c "sleep 22222"
    ```

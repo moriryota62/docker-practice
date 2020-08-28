@@ -18,7 +18,7 @@
 
 4. 以下のコマンドでコンテナログの場所を確認してください。
    ``` sh
-   doker inspect {コンテナID} | grep LogPath
+   docker inspect {コンテナID} | grep LogPath
    ```
 
 5. ホストOSにあるログファイルの内容を表示してください。jsonに整形されたログが表示されることを確認してください。
@@ -33,7 +33,7 @@
 
 9. 以下コマンドでログ設定を確認してください。
    ``` sh
-   doker inspect {コンテナID} | grep -e max-file -e max-size
+   docker inspect {コンテナID} | grep -e max-file -e max-size
    ```
 
 10. コンテナを削除してください。

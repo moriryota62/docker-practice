@@ -53,7 +53,7 @@
 
 8. コンテナをすべて削除します。
    ``` sh
-   docker rm -f `docker ps -a -q`
+   sudo docker rm -f `sudo docker ps -a -q`
    ```
 
 9. 確認用に作成したコンテナイメージを削除します。
