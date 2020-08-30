@@ -33,7 +33,10 @@ docker-composeはコンテナ起動の設定をファイルに定義し、定義
    
 4. ホストOSからlocalhost:8080に対してcurlを実行してください。
    
-5. コンテナに``env``の追加コマンドを発行し環境変数``ENV=test``が設定されていることを確認してください。
+5. コンテナに``env``の追加コマンドを発行し環境変数``ENV=test``が設定されていることを確認してください。docker-composeで起動したコンテナに対する追加コマンドは以下のように[docker-compose exec](https://matsuand.github.io/docs.docker.jp.onthefly/compose/reference/exec/)コマンドを使うと便利です。
+   ``` sh
+   sudo docker-compose exec web env | grep ENV
+   ```
 
 6. 以下コマンドでコンテナのログ設定を確認してください。
    ``` sh
