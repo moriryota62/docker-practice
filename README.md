@@ -5,6 +5,13 @@ Docker practiceはこれからDockerに入門する方を対象とした問題�
 ## 前提
 Dockerおよびdocker-composeをインストールしてありDocker Hubに接続できる端末で実施する前提です。また、一部のプラクティスは2台のサーバを使用します。
 
+なお、インストールの方法については以下の公式マニュアル等を確認ください。
+- [dockerエンジン](https://docs.docker.com/engine/install/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+
+また、WSLの環境でDockerを使えるようにするには以下のQiitaなどが参考になると思います。
+- [WSLでdockerのインストールからdocker-composeまで動かす](https://qiita.com/tettsu__/items/85c96850d187e4386c24)
+
 # プラクティスの内容
 
 プラクティス内の``{ホストOS名}``など{}でくくった日本語の箇所は括弧内の日本語に従い置換してください。
